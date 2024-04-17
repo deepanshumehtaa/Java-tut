@@ -58,3 +58,9 @@ This simplifies code by removing the need for manual bean lookup and improves ma
 
 In Spring Boot, a bean is a managed object that forms the backbone of your application. It's any Java object that's instantiated, configured, and managed by the Spring IoC (Inversion of Control) container.
 
+.......................................................................................................................................
+
+Q: what is `bean` in spring boot ?
+A: 
+
+

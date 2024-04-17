@@ -1,7 +1,17 @@
+In a Spring Boot application when an API is called, the following sequence of events typically occurs:
+1. first reaches the web container (e.g., Tomcat)
+2. web container forwards the request to the Dispatcher Servlet, a central component in Spring MVC applications.
+3. The Dispatcher Servlet uses Handler Mappings to identify a suitable controller method that can handle the request. This involves matching the request URL pattern to a controller method's @RequestMapping annotation.
+    @RequestMapping annotation : mappings between URLs and controller 
+4. then Dispatcher Servlet invokes that method, typically located in a folder named controllers 
+5.  controller might interact with service layer classes located in the services
+6. Services might interact with repository classes, Repositories provide an abstraction layer for interacting with your data source (e.g., database) using JPA, etc
+    
 folders:
 1. config:
     Contains configuration classes for various aspects of your application (e.g., database connection, security).
-2. api (controllers):
+2. api  -- controllers
+        -- dto (Data Transfer Objects for transferring data b/w diff layers of ur app +  `loosely coupled` Service and controller layers can work with DTOs without depending on the specific implementation details of your JPA entities.)
   Holds classes responsible for handling incoming HTTP requests and defining your application's API endpoints.
 3. models (entities): Contains classes representing your data models (POJOs or domain objects).
 4. repositories: This subdirectory stores classes responsible for interacting with your data source (e.g., JPA repositories).

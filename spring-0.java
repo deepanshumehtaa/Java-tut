@@ -6,6 +6,8 @@ In a Spring Boot application when an API is called, the following sequence of ev
 4. then Dispatcher Servlet invokes that method, typically located in a folder named controllers 
 5.  controller might interact with service layer classes located in the services
 6. Services might interact with repository classes, Repositories provide an abstraction layer for interacting with your data source (e.g., database) using JPA, etc
+
+    [Dispatcher --> Controller --> service --> repo --> response] 
     
 folders:
 1. config:
